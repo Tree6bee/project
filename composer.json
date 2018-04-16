@@ -1,0 +1,33 @@
+{
+    "name": "tree6bee/app",
+    "description": "create a new ctx framework application project.",
+    "type": "project",
+    "keywords": ["ctx", "cf", "application", "project", "tree6bee"],
+    "license": "MIT",
+
+    "require": {
+        "php": ">=5.3",
+        "tree6bee/ctx": "~2.0",
+        "tree6bee/queue": "~2.0",
+        "tree6bee/cf": "~2.0",
+        "twig/twig": "~2.0",
+        "vlucas/phpdotenv": "~2.2",
+        "predis/predis": "^1.1",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.4"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/app/",
+            "Ctx\\": "ctx/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Ctx\\": "ctx/tests/"
+        }
+    }
+}

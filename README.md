@@ -6,7 +6,7 @@
 * Installation
 
 ```
-composer create-project tree6bee/app=~2.0 --no-install
+composer create-project tree6bee/app=~2.0
 ```
 
 ### ctx

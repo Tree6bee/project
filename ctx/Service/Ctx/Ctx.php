@@ -91,7 +91,7 @@ class Ctx extends BasicCtx
      */
     public function loadRedis($redis = 'default')
     {
-        return $this->storage->redis($redis = 'default');
+        return $this->storage->redis($redis);
     }
 
     /**

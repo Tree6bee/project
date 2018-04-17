@@ -24,28 +24,6 @@ Ctx is an MIT-licensed open source project. 
 
 We recommend that you use Ctx handling all logic with Ctx modules. Controller classes or Cli script could be just used for taking request parameters, and their total behavior are performed by calling common service modules.
 
-## Installation
-
-### Server Requirements
-
-The Ctx service framework has a few basic system requirements:
-
-* PHP >= 5.3
-
-But the Ctx basic module ( include db, cache, config, etc. ) has other system requirements, so it's highly recommended you make sure your server meets the following requirements:
-
-* PHP >= 7
-* PDO PHP Extension
-* CURL PHP Extension
-
-### Installing Ctx
-
-Via composer create-Project
-
-```
-composer create-project tree6bee/ctx_base --no-dev
-```
-
 ## Usage
 
 ### Defining Ctx Instance

@@ -4,9 +4,9 @@ namespace Ctx\Service\Ctx\Child;
 
 use Ctx\Basic\Ctx;
 use Ctx\Basic\Exception;
-use Tree6bee\Support\Ctx\Db\Mysql;
-use Tree6bee\Support\Ctx\Db\Pgsql;
 use Predis\Client as Redis;
+use Tree6bee\Support\Ctx\Db\MySqlConnection;
+use Tree6bee\Support\Ctx\Db\PostgresConnection;
 
 /**
  * 框架存储辅助类
@@ -33,7 +33,6 @@ class Storage extends Ctx
      *
      * @param string $database
      * @return \Tree6bee\Support\Ctx\Db\Connection
-     * @throws Exception
      */
     public function db($database = 'default.master')
     {
@@ -41,9 +40,9 @@ class Storage extends Ctx
             $config = $this->getItem($database, null, 'db');
 
             if ($config['driver'] == 'mysql') {
-                self::$dbObj[$database] = new Mysql($config['dsn'], $config['user'], $config['psw']);
+                self::$dbObj[$database] = new MySqlConnection($config['dsn'], $config['user'], $config['psw']);
             } else {    //默认Pgsql
-                self::$dbObj[$database] = new Pgsql($config['dsn'], $config['user'], $config['psw']);
+                self::$dbObj[$database] = new PostgresConnection($config['dsn'], $config['user'], $config['psw']);
             }
         }
 

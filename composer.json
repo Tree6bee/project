@@ -28,11 +28,5 @@
         "psr-4": {
             "Tests\\Ctx\\": "ctx/tests/"
         }
-    },
-    "repositories": [
-        { "type": "git", "url": "https://github.com/Tree6bee/support" },
-        { "type": "git", "url": "https://github.com/Tree6bee/framework" },
-        { "type": "git", "url": "https://github.com/Tree6bee/queue" },
-        { "type": "git", "url": "https://github.com/phpctx/ctx" }
-    ]
+    }
 }

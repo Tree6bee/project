@@ -2,7 +2,6 @@
 
 namespace Ctx;
 
-use Dotenv\Dotenv;
 use PHPCtx\Ctx\Ctx as BasicCtx;
 
 /**
@@ -18,10 +17,4 @@ class Ctx extends BasicCtx
      * ctx命名空间
      */
     protected $ctxNamespace = 'Ctx';
-
-    protected function __construct()
-    {
-        parent::__construct();
-        (new Dotenv(__DIR__, '.env'))->load(); //getenv($var)
-    }
 }

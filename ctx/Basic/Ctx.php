@@ -3,6 +3,7 @@
 namespace Ctx\Basic;
 
 use PHPCtx\Ctx\Basic\Ctx as BasicCtx;
+use Tree6bee\Support\Ctx\Rpc\Client;
 
 /**
  * Ctx基类
@@ -13,30 +14,6 @@ abstract class Ctx extends BasicCtx
      * @var \Ctx\Ctx $ctx
      */
     public $ctx;
-
-    private static $ctxChildren = [];
-
-    /**
-     * @return mixed
-     *
-     * 根据类的不同构造函数的参数 获取对象的单例
-     */
-    final protected function loadSC()
-    {
-        $args = func_get_args();
-        $class = array_shift($args);
-        $argsKey = serialize($args);
-
-        //这里不能用 Arr 辅助类，因为参数可能含有 '.' 导致一些意外
-        if (empty(self::$ctxChildren[$this->getModName()]) ||
-            empty(self::$ctxChildren[$this->getModName()][$class]) ||
-            empty(self::$ctxChildren[$this->getModName()][$class][$argsKey])
-        ) {
-            self::$ctxChildren[$this->getModName()][$class][$argsKey] = $this->loadChild($class, $args);
-        }
-
-        return self::$ctxChildren[$this->getModName()][$class][$argsKey];
-    }
 
     /*--- part.2 非框架核心 ---*/
 
@@ -71,5 +48,11 @@ abstract class Ctx extends BasicCtx
     {
         $path = '@common/' . $file;
         return $this->ctx->Ctx->getConf($item . $path, $default);
+    }
+
+    protected function invokeRpc($method, $args)
+    {
+        $rpc = new Client($this->rpc['host']);
+        return $rpc->exec($this->getModName(), $method, $args);
     }
 }

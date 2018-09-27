@@ -42,7 +42,7 @@ class Ctx extends BasicCtx
     {
         // 如果为公有属性可以等效于直接赋值给ctx节点
         // $this->ctx->Ctx->config = new Config(__DIR__ . '/../../config');
-        (new Dotenv(__DIR__, '.env'))->load(); //getenv($var)
+        (new Dotenv(__DIR__ . '/../../', '.env'))->load(); //getenv($var)
         $this->config = new Config(__DIR__ . '/../../config');
         $this->storage = $this->loadC('Storage');
         $this->queue = $this->loadC('Queue');

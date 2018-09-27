@@ -2,7 +2,7 @@
 
 namespace Ctx\Basic;
 
-use Tree6bee\Ctx\Exceptions\Exception as BasicException;
+use PHPCtx\Ctx\Exceptions\Exception as BasicException;
 
 /**
  * 框架异常

@@ -2,7 +2,7 @@
 
 namespace App\Routing;
 
-use Tree6bee\Cf\Routing\Router as BaseRouter;
+use Tree6bee\Framework\Routing\Router as BaseRouter;
 
 class Router extends BaseRouter
 {

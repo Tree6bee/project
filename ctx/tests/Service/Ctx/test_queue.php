@@ -5,7 +5,7 @@
 # dispatch job: php tests/Service/Ctx/test_queue.php
 # do job with daemon: php tests/Service/Ctx/test_queue.php 1
 
-include __DIR__ . '/../../../vendor/autoload.php';
+include __DIR__ . '/../../../../vendor/autoload.php';
 
 class ExampleJob extends \Ctx\Service\Ctx\Child\Queue\Job
 {

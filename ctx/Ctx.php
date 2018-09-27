@@ -3,7 +3,7 @@
 namespace Ctx;
 
 use Dotenv\Dotenv;
-use Tree6bee\Ctx\Ctx as BasicCtx;
+use PHPCtx\Ctx\Ctx as BasicCtx;
 
 /**
  * Context 上下文

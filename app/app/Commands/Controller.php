@@ -3,7 +3,7 @@
 namespace App\Commands;
 
 use App\App;
-use Tree6bee\Cf\Routing\Controller as BasicController;
+use Tree6bee\Framework\Routing\Controller as BasicController;
 
 abstract class Controller extends BasicController
 {

@@ -1,17 +1,17 @@
 {
-    "name": "tree6bee/app",
+    "name": "tree6bee/project",
     "description": "create a new ctx framework application project.",
     "type": "project",
-    "keywords": ["ctx", "cf", "application", "project", "tree6bee"],
+    "keywords": ["application", "tree6bee"],
     "license": "MIT",
 
     "require": {
-        "php": ">=7.1",
-        "tree6bee/ctx": "~2.0",
-        "tree6bee/queue": "~2.0",
+        "php": ">=5.6",
+        "tree6bee/framework": "~1.0",
+        "phpctx/ctx": "~1.0",
+        "tree6bee/queue": "~1.0",
         "vlucas/phpdotenv": "~2.2",
         "predis/predis": "^1.1",
-        "tree6bee/cf": "~2.0",
         "twig/twig": "~2.0"
     },
     "require-dev": {
@@ -28,5 +28,11 @@
         "psr-4": {
             "Tests\\Ctx\\": "ctx/tests/"
         }
-    }
+    },
+    "repositories": [
+        { "type": "git", "url": "https://github.com/Tree6bee/support" },
+        { "type": "git", "url": "https://github.com/Tree6bee/framework" },
+        { "type": "git", "url": "https://github.com/Tree6bee/queue" },
+        { "type": "git", "url": "https://github.com/phpctx/ctx" }
+    ]
 }

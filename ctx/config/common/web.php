@@ -8,7 +8,7 @@
  *  - production(生产环境)
  *  - maintenance(维护模式)
  *
- * -- cfVersion (框架版本)
+ * -- tfVersion (框架版本)
  * -- timezone (时区)
  *
  * - xhprof_dir util包路径
@@ -17,6 +17,6 @@
  */
 return [
     'debug'         => getenv('WEB_DEBUG'),
-    'cfVersion'     => 'CtxFramework/2.0',
+    'tfVersion'     => 'TFramework/2.0',
     'timezone'      => 'PRC',
 ];

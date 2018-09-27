@@ -2,7 +2,7 @@
 
 namespace App\Helpers;
 
-use Tree6bee\Cf\Logging\Logger;
+use Tree6bee\Framework\Logging\Logger;
 
 class Log extends Logger
 {

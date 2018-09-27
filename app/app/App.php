@@ -5,7 +5,7 @@ namespace App;
 use App\Exceptions\Handler;
 use App\Routing\Router;
 use Ctx\Ctx;
-use Tree6bee\Cf\Foundation\Application;
+use Tree6bee\Framework\Foundation\Application;
 use Tree6bee\Support\Helpers\Exceptions\Contracts\ExceptionsHandler;
 
 /**
@@ -47,7 +47,7 @@ class App extends Application
      *  - production(生产环境)
      *  - maintenance(维护模式)
      *
-     * -- cfVersion (框架版本)
+     * -- tfVersion (框架版本)
      * -- timezone (时区)
      *
      * - xhprof_dir util包路径
@@ -57,7 +57,7 @@ class App extends Application
     protected $config = [
         //'environment'   => 'production', 暂时用不到
         'debug'         => false,
-        'cfVersion'     => 'CtxFramework/1.0',
+        'tfVersion'     => 'TFramework/1.0',
         'timezone'      => 'PRC',
         'xhprof_dir'    => __DIR__ . '/../public/xhprof',
         'view'          => [
@@ -73,7 +73,7 @@ class App extends Application
      */
     protected function setExceptionsHandler()
     {
-        return new Handler($this->config('debug'), '', $this->config('cfVersion'));
+        return new Handler($this->config('debug'), '', $this->config('tfVersion'));
     }
 
     protected function initRouter()
@@ -85,6 +85,6 @@ class App extends Application
      * 全局中间件
      */
     protected $middleware = [
-        // \Tree6bee\Cf\Foundation\Middleware\Xhprof::class,
+        // \Tree6bee\Framework\Foundation\Middleware\Xhprof::class,
     ];
 }

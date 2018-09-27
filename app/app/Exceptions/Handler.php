@@ -2,7 +2,7 @@
 
 namespace App\Exceptions;
 
-use Tree6bee\Cf\Exceptions\HttpException;
+use Tree6bee\Framework\Exceptions\HttpException;
 use Tree6bee\Support\Helpers\Exceptions\Handler as ExceptionsHandler;
 use App\Helpers\Log;
 
@@ -15,11 +15,11 @@ class Handler extends ExceptionsHandler
      */
     protected $debug;
 
-    public function __construct($debug = false, $collapseDir = '', $cfVersion = 'CtxFramework/1.0')
+    public function __construct($debug = false, $collapseDir = '', $tfVersion = 'TFramework/1.0')
     {
         $this->debug = $debug;
 
-        parent::__construct($collapseDir, $cfVersion);
+        parent::__construct($collapseDir, $tfVersion);
     }
 
     /**

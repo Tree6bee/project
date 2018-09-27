@@ -2,7 +2,7 @@
 
 namespace Ctx\Basic;
 
-use Tree6bee\Ctx\Basic\Ctx as BasicCtx;
+use PHPCtx\Ctx\Basic\Ctx as BasicCtx;
 
 /**
  * Ctx基类

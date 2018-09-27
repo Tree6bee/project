@@ -11,13 +11,13 @@ class Index extends Controller
      */
     protected static $middleware = array(
         'index' => array(
-//            '\Tree6bee\Cf\Foundation\Http\Middleware\VerifyCsrfToken',
+//            '\Tree6bee\Framework\Foundation\Http\Middleware\VerifyCsrfToken',
         ),
     );
 
     public function index()
     {
-        $name = 'cf';
+        $name = 'tf';
 
         return $this->render(
             '/Home/index.html',
